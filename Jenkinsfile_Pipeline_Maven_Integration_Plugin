@@ -17,14 +17,14 @@ pipeline {
         stage('Build') {
             steps {
                 withMaven(mavenOpts: '-Xmx4G') {
-                sh 'mvn -B clean compile'
+                sh 'mvn clean compile'
                 }
             }
         }
         stage('Test') {
             steps {
                 withMaven(mavenOpts: '-Xmx4G') {
-                sh 'mvn -B test '
+                sh 'mvn test '
                 }
             }
         }

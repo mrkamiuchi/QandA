@@ -17,7 +17,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'export MAVEN_OPTS="-Xmx4G"'
-                sh 'mvn -B -DskipTests clean compile'
+                sh 'mvn clean compile'
             }
         }
         stage('Test') {
